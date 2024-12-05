@@ -1,3 +1,5 @@
+// Seeding random people and poll results
+
 const people = {};
 
 function addPerson(personName) {
@@ -48,91 +50,93 @@ function seedRandomVotes(peopleObj) {
   return polls;
 }
 
-// const realPolls = seedRandomVotes(people);
+const realPolls = seedRandomVotes(people);
 // console.log(realPolls);
 
-const realPolls = {
-  poll1: {
-    A: ["alice", "dylan", "ethan", "fred", "han"],
-    B: ["bob", "candice", "gretchen"],
-  },
-  poll2: {
-    A: ["dylan", "ethan", "fred", "gretchen"],
-    B: ["alice", "bob", "candice", "han"],
-  },
-  poll3: {
-    A: ["candice", "dylan", "ethan", "fred", "han"],
-    B: ["alice", "bob", "gretchen"],
-  },
-  poll4: {
-    A: ["alice", "dylan", "ethan", "han"],
-    B: ["bob", "candice", "fred", "gretchen"],
-  },
-  poll5: {
-    A: ["alice", "bob", "candice", "ethan", "gretchen", "han"],
-    B: ["dylan", "fred"],
-  },
-  poll6: {
-    A: ["bob", "dylan", "ethan"],
-    B: ["alice", "candice", "fred", "gretchen", "han"],
-  },
-  poll7: {
-    A: ["candice", "dylan", "han"],
-    B: ["alice", "bob", "ethan", "fred", "gretchen"],
-  },
-  poll8: {
-    A: ["bob", "candice", "han"],
-    B: ["alice", "dylan", "ethan", "fred", "gretchen"],
-  },
-  poll9: {
-    A: ["alice", "candice", "dylan", "ethan", "fred", "gretchen"],
-    B: ["bob", "han"],
-  },
-  poll10: {
-    A: ["dylan", "fred"],
-    B: ["alice", "bob", "candice", "ethan", "gretchen", "han"],
-  },
-  poll11: {
-    A: ["bob", "candice", "ethan", "fred", "gretchen"],
-    B: ["alice", "dylan", "han"],
-  },
-  poll12: {
-    A: ["alice", "bob", "ethan", "fred", "han"],
-    B: ["candice", "dylan", "gretchen"],
-  },
-  poll13: {
-    A: ["alice", "fred", "gretchen", "han"],
-    B: ["bob", "candice", "dylan", "ethan"],
-  },
-  poll14: {
-    A: ["alice", "candice", "fred", "gretchen", "han"],
-    B: ["bob", "dylan", "ethan"],
-  },
-  poll15: {
-    A: ["bob", "fred"],
-    B: ["alice", "candice", "dylan", "ethan", "gretchen", "han"],
-  },
-  poll16: {
-    A: ["alice", "bob", "candice", "dylan", "fred", "gretchen", "han"],
-    B: ["ethan"],
-  },
-  poll17: {
-    A: ["dylan", "ethan", "fred", "gretchen", "han"],
-    B: ["alice", "bob", "candice"],
-  },
-  poll18: {
-    A: ["alice", "dylan", "ethan", "han"],
-    B: ["bob", "candice", "fred", "gretchen"],
-  },
-  poll19: {
-    A: ["dylan"],
-    B: ["alice", "bob", "candice", "ethan", "fred", "gretchen", "han"],
-  },
-  poll20: {
-    A: ["alice", "candice", "fred"],
-    B: ["bob", "dylan", "ethan", "gretchen", "han"],
-  },
-};
+// One instance of seedRandomVotes for repeatability:
+
+// const realPolls = {
+//   poll1: {
+//     A: ["alice", "dylan", "ethan", "fred", "han"],
+//     B: ["bob", "candice", "gretchen"],
+//   },
+//   poll2: {
+//     A: ["dylan", "ethan", "fred", "gretchen"],
+//     B: ["alice", "bob", "candice", "han"],
+//   },
+//   poll3: {
+//     A: ["candice", "dylan", "ethan", "fred", "han"],
+//     B: ["alice", "bob", "gretchen"],
+//   },
+//   poll4: {
+//     A: ["alice", "dylan", "ethan", "han"],
+//     B: ["bob", "candice", "fred", "gretchen"],
+//   },
+//   poll5: {
+//     A: ["alice", "bob", "candice", "ethan", "gretchen", "han"],
+//     B: ["dylan", "fred"],
+//   },
+//   poll6: {
+//     A: ["bob", "dylan", "ethan"],
+//     B: ["alice", "candice", "fred", "gretchen", "han"],
+//   },
+//   poll7: {
+//     A: ["candice", "dylan", "han"],
+//     B: ["alice", "bob", "ethan", "fred", "gretchen"],
+//   },
+//   poll8: {
+//     A: ["bob", "candice", "han"],
+//     B: ["alice", "dylan", "ethan", "fred", "gretchen"],
+//   },
+//   poll9: {
+//     A: ["alice", "candice", "dylan", "ethan", "fred", "gretchen"],
+//     B: ["bob", "han"],
+//   },
+//   poll10: {
+//     A: ["dylan", "fred"],
+//     B: ["alice", "bob", "candice", "ethan", "gretchen", "han"],
+//   },
+//   poll11: {
+//     A: ["bob", "candice", "ethan", "fred", "gretchen"],
+//     B: ["alice", "dylan", "han"],
+//   },
+//   poll12: {
+//     A: ["alice", "bob", "ethan", "fred", "han"],
+//     B: ["candice", "dylan", "gretchen"],
+//   },
+//   poll13: {
+//     A: ["alice", "fred", "gretchen", "han"],
+//     B: ["bob", "candice", "dylan", "ethan"],
+//   },
+//   poll14: {
+//     A: ["alice", "candice", "fred", "gretchen", "han"],
+//     B: ["bob", "dylan", "ethan"],
+//   },
+//   poll15: {
+//     A: ["bob", "fred"],
+//     B: ["alice", "candice", "dylan", "ethan", "gretchen", "han"],
+//   },
+//   poll16: {
+//     A: ["alice", "bob", "candice", "dylan", "fred", "gretchen", "han"],
+//     B: ["ethan"],
+//   },
+//   poll17: {
+//     A: ["dylan", "ethan", "fred", "gretchen", "han"],
+//     B: ["alice", "bob", "candice"],
+//   },
+//   poll18: {
+//     A: ["alice", "dylan", "ethan", "han"],
+//     B: ["bob", "candice", "fred", "gretchen"],
+//   },
+//   poll19: {
+//     A: ["dylan"],
+//     B: ["alice", "bob", "candice", "ethan", "fred", "gretchen", "han"],
+//   },
+//   poll20: {
+//     A: ["alice", "candice", "fred"],
+//     B: ["bob", "dylan", "ethan", "gretchen", "han"],
+//   },
+// };
 
 function getTopFiveShared(personName) {
   if (!people[personName]) {
@@ -173,4 +177,5 @@ function getTopFiveShared(personName) {
   }
 }
 
+// Example using Dylan
 console.log(getTopFiveShared("dylan"));
