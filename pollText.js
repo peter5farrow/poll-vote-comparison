@@ -157,7 +157,7 @@ function getTopFiveShared(personName) {
     }
   }
 
-  console.log(people);
+  // console.log(people);
 
   const sortable = Object.entries(people[personName])
     .sort(([, a], [, b]) => b - a)
